@@ -1,5 +1,8 @@
+import { login, User } from "./interface_D"; // import interface from another file
+import * as UserLogin from "./interface_D"; // import all interface from another file (alias)
+
 // class syntax
-class Employee {
+class Employee implements login {
     
     // properties of class
     id!: number; // we are using ! operator because of this error: Property 'id' has no initializer and is not definitely assigned in the constructor.
@@ -45,6 +48,10 @@ class Employee {
     // class having methods
     getNameWithAddress() : string {
         return `${this.name} stays at ${this.address}`; // variable string literals
+    }
+
+    login(): User {
+        return {name: "John", id: 1, email: "john@redmail.com"};
     }
 }
 

@@ -6,6 +6,7 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 };
 var _Employee_mobileNumber;
+Object.defineProperty(exports, "__esModule", { value: true });
 // class syntax
 class Employee {
     // Type script can have only default constructor or parameterized constructor.
@@ -36,6 +37,9 @@ class Employee {
     // class having methods
     getNameWithAddress() {
         return `${this.name} stays at ${this.address}`; // variable string literals
+    }
+    login() {
+        return { name: "John", id: 1, email: "john@redmail.com" };
     }
 }
 _Employee_mobileNumber = new WeakMap();
